@@ -1,11 +1,18 @@
 import Link from "next/link";
 
+type ServiceCardProps = {
+  title: string;
+  description: string;
+  points?: string[];
+  link: string;
+};
+
 export default function ServiceCard({
   title,
   description,
   points = [],
   link,
-}) {
+}: ServiceCardProps) {
   return (
     <div className="bg-[#181818] p-6 rounded-xl border border-white/10 hover:border-accent transition flex flex-col">
       <h3 className="text-xl font-medium mb-3">
