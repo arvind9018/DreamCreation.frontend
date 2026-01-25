@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ContactPage() {
   return (
     <div className="px-6 pt-32 pb-24 bg-dark text-secondary">
@@ -14,68 +16,67 @@ export default function ContactPage() {
       </section>
 
       {/* Content */}
-      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
-        {/* Form Card */}
-        <div className="bg-[#181818] p-8 rounded-2xl border border-white/10">
-          <h2 className="text-2xl font-semibold mb-6">
-            Send us a message
+        {/* FORM CARD */}
+        <div className="relative bg-[#181818] p-10 rounded-[32px] border border-white/20 shadow-xl">
+
+          <h2 className="text-3xl font-semibold mb-8 text-accent">
+            Send Us A Message
           </h2>
 
-          <form className="space-y-5">
+          <form className="space-y-6">
 
             <input
               type="text"
-              placeholder="Your name"
-              className="w-full px-4 py-3 rounded-lg bg-dark border border-white/10 text-secondary placeholder:text-secondary/50 focus:outline-none focus:border-accent transition"
+              placeholder="Your Name"
+              className="w-full px-5 py-4 rounded-xl bg-[#2a2a2a] border border-white/10 text-secondary placeholder:text-secondary/50 focus:outline-none focus:border-accent transition"
             />
 
             <input
               type="email"
-              placeholder="Your email"
-              className="w-full px-4 py-3 rounded-lg bg-dark border border-white/10 text-secondary placeholder:text-secondary/50 focus:outline-none focus:border-accent transition"
+              placeholder="Your E-mail"
+              className="w-full px-5 py-4 rounded-xl bg-[#2a2a2a] border border-white/10 text-secondary placeholder:text-secondary/50 focus:outline-none focus:border-accent transition"
             />
 
             <textarea
               rows={5}
-              placeholder="Your message"
-              className="w-full px-4 py-3 rounded-lg bg-dark border border-white/10 text-secondary placeholder:text-secondary/50 focus:outline-none focus:border-accent transition resize-none"
+              placeholder="Your Message"
+              className="w-full px-5 py-4 rounded-xl bg-[#2a2a2a] border border-white/10 text-secondary placeholder:text-secondary/50 focus:outline-none focus:border-accent transition resize-none"
             />
 
             <button
               type="submit"
-              className="w-full py-3 rounded-lg bg-accent-gradient text-dark font-semibold hover:opacity-90 transition"
+              className="w-full py-4 rounded-xl bg-accent-gradient text-dark font-semibold hover:opacity-90 transition"
             >
               Send Message
             </button>
           </form>
         </div>
 
-        {/* Info Section */}
-        <div className="flex flex-col justify-center">
-          <h2 className="text-2xl font-semibold mb-6">
-            Get in touch
-          </h2>
+        {/* RIGHT ILLUSTRATION + INFO */}
+        <div className="flex flex-col items-center text-center gap-8">
 
-          <p className="text-secondary/70 mb-8 leading-relaxed">
-            Whether you’re a student, developer, or founder,
-            feel free to reach out. We usually respond within 24 hours.
-          </p>
+          {/* IMAGE */}
+          <Image
+            src="/hero/contact.png"
+            alt="Contact Support"
+            width={420}
+            height={420}
+            className="object-contain"
+            priority
+          />
 
-          <ul className="space-y-4 text-secondary/80">
-            <li>
-              📧 <span className="font-medium text-secondary">Email:</span>{" "}
-              support@dreamcreation.com
-            </li>
-            <li>
-              📍 <span className="font-medium text-secondary">Location:</span>{" "}
-              India
-            </li>
-            <li>
-              ⏱ <span className="font-medium text-secondary">Response time:</span>{" "}
-              Within 24 hours
-            </li>
-          </ul>
+          {/* CONTACT INFO */}
+          <div className="space-y-2 text-secondary/80">
+            <p className="text-accent font-medium">
+              Support@dreamcreations.in
+            </p>
+            <p>
+              +91 7658009018
+            </p>
+          </div>
+
         </div>
 
       </section>
