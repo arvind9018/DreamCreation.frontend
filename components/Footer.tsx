@@ -75,7 +75,9 @@ export default function Footer() {
 
         {/* BOTTOM */}
         <div className="mt-16 pt-8 border-t border-white/10 text-center text-gray-500 text-sm">
-          © {new Date().getFullYear()} Dream Creation. Made with ❤️
+          © {new Date().getFullYear()} Dream Creation. Made with{" "}
+<span className="heart">❤️</span>
+
         </div>
       </div>
     </footer>
