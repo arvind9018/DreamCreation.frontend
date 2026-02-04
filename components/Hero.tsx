@@ -55,10 +55,11 @@ export default function Hero() {
           <p className="max-w-xl text-lg text-gray-400 mb-10">
             {slide.desc}
           </p>
-
-          <button className="px-10 py-4 rounded-xl bg-accent-gradient text-dark font-bold text-lg shadow-lg hover:scale-105 transition">
-            Get Started
-          </button>
+          <a href="/signup">
+            <button className="px-10 py-4 rounded-xl bg-accent-gradient text-dark font-bold text-lg shadow-lg hover:scale-105 transition">
+              Get Started
+            </button>
+          </a>
         </div>
 
         {/* RIGHT IMAGE */}
